@@ -1,5 +1,5 @@
 <?php
-require_once  ROOT_DIR . "/framework/base_handler.class.php";
+require_once  WOO_DIR . "/base_handler.class.php";
 
 class helloworld extends BaseHandler 
 {
