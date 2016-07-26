@@ -60,7 +60,7 @@ source code for myhandlers/helloworld.php:
 <?php
 require_once  WOO_DIR . "/base_handler.class.php";
 
-class helloworld extends BaseHandler 
+final class helloworld extends BaseHandler 
 {
     protected function do_post($req) 
     {
