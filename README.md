@@ -7,8 +7,8 @@ the struct of demo application as follows:
 ```
 $ tree woo_demo/
 woo_demo/
-|-- import
-|   `-- woo  //the Woo Framework; just copy and place here.
+|-- import  // `customized directory to place Woo.`
+|   `-- woo
 |       |-- README.md
 |       |-- app.php
 |       |-- internals
@@ -18,18 +18,18 @@ woo_demo/
 |       |   `-- woo.class.php
 |       `-- myhandlers
 |           `-- helloworld.class.php
-|-- index.php //the application entry
-`-- myhandlers // directory for your business handlers
-    `-- helloworld.class.php
+|-- index.php // `the application entry`
+`-- myhandlers // `directory for your logic handlers`
+    `-- helloworld.class.php `the helloworld handler's class.`
 ```
 
 step-by-step for a helloworld application:
 
-* download Woo and place it into you project's struct:
+1. download Woo and place it under you project's `import` directory.
 
-* create your entry:
+2. create your entry `index.php`.
 
-```
+```php
 <?php
     require_once dirname(__FILE__) . '/import/woo/' . "app.php";
     
@@ -38,11 +38,11 @@ step-by-step for a helloworld application:
 ?>
 ```
  
-* implement your handler:
+3. implement your handler.
 
 source code for myhandlers/helloworld.php:
 
-```
+```php
 <?php
 require_once  WOO_DIR . "/base_handler.class.php";
 
@@ -61,7 +61,7 @@ class helloworld extends BaseHandler
 
 ```
 
-* testing
+4. testing
 
 ```
 curl -H "Content-Type:application/x-www.form-urlencoded"   --data '{"action" : "helloworld","data" : {"a":1, "b":2}}' http://127.0.0.1/wooapp/index.php -v
@@ -92,5 +92,5 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 ## Feedbacks
-[zergl] (e3.gemini#qq.com)
+zergl <e3.gemini#qq.com>
 
