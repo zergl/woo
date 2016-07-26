@@ -1,17 +1,30 @@
 # Woo
-  -- Yet Another TINY PHP Application Framework.
+
+    Yet Another TINY PHP Application Framework.
 
 ```php
     $about = array(
-        "author" -> "zergl <859077290@qq.com>",
-        "date"   -> "2016/07/21",
-        "desc"   -> "Woo -- Yet Another TINY PHP Framework."
+        "author" => "zergl <859077290@qq.com>",
+        "date"   => "2016/07/21",
+        "desc"   => "Woo -- Yet Another TINY PHP Framework."
     );
 ```
 
 ## STATUS
 
 `UNDER DEVELOPMENT`
+
+## FEATURES
+
+* extremely tiny.
+* simple routing.
+    * `action` : routing for handler's class;
+    * `METHOD` : routing for inner processing method of the handlers.
+* simple and easy for learning how to write a application framework.
+* others
+    * now support `POST` only.
+    * no DAO for database wrapper yet.
+    * no performance benchmark yet.
 
 
 ## How to Use
@@ -20,8 +33,8 @@ the struct of demo application as follows:
 
 ```
 $ tree woo_demo/
-woo_demo/
-|-- import  // `customized directory to place Woo.`
+woo_demo
+|-- import          // `customized directory to place Woo.`
 |   `-- woo
 |       |-- README.md
 |       |-- app.php
@@ -32,16 +45,16 @@ woo_demo/
 |       |   `-- woo.class.php
 |       `-- myhandlers
 |           `-- helloworld.class.php
-|-- index.php // `the application entry`
-`-- myhandlers // `directory for your logic handlers`
+|-- index.php       // `the application entry`
+`-- myhandlers      // `directory for your logic handlers`
     `-- helloworld.class.php `the helloworld handler's class.`
 ```
 
 step-by-step for a helloworld application:
 
--- #1# download Woo and place it under you project's `import` directory.
+- 1.download Woo and place it under you project's `import` directory.
 
--- #2# create your entry `index.php`.
+- 2.create your entry `index.php`.
 
 ```php
 <?php
@@ -51,8 +64,9 @@ step-by-step for a helloworld application:
     Woo::instance()->serve($myhandler_dir);
 ?>
 ```
- 
--- #3# implement your handler.
+
+
+- 3.implement your handler.
 
 source code for myhandlers/helloworld.php:
 
@@ -75,14 +89,14 @@ final class helloworld extends BaseHandler
 
 ```
 
--- #4# testing
+- 4.testing
 
 ```bash
 curl -H "Content-Type:application/x-www.form-urlencoded"   --data '{"action" : "helloworld","data" : {"a":1, "b":2}}' http://127.0.0.1/wooapp/index.php -v
 ```
 
 Request:
-```
+```bash
 POST /wooapp/index.php HTTP/1.1
 Host: 127.0.0.1
 User-Agent: curl/7.49.1
@@ -92,7 +106,7 @@ Content-Length: 49
 ```
 
 Response:
-```
+```bash
 HTTP/1.1 200 OK
 Date: Tue, 26 Jul 2016 13:19:54 GMT
 Server: Apache/2.4.6 (CentOS) PHP/5.4.16
@@ -104,7 +118,3 @@ Content-Type: text/html; charset=UTF-8
 {"ret":0,"msg":"succ.","data":"Hello world!"}
 
 ```
-
-## Feedbacks
-zergl 859077290#qq.com
-
