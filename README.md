@@ -1,4 +1,18 @@
-# Woo - Yet Another TINY PHP Application Framework.
+# Woo
+  -- Yet Another TINY PHP Application Framework.
+
+```php
+    $about = array(
+        "author" -> "zergl <859077290@qq.com>",
+        "date"   -> "2016/07/21",
+        "desc"   -> "Woo -- Yet Another TINY PHP Framework."
+    );
+```
+
+## STATUS
+
+`UNDER DEVELOPMENT`
+
 
 ## How to Use
 
@@ -25,9 +39,9 @@ woo_demo/
 
 step-by-step for a helloworld application:
 
-1. download Woo and place it under you project's `import` directory.
+-- #1# download Woo and place it under you project's `import` directory.
 
-2. create your entry `index.php`.
+-- #2# create your entry `index.php`.
 
 ```php
 <?php
@@ -38,7 +52,7 @@ step-by-step for a helloworld application:
 ?>
 ```
  
-3. implement your handler.
+-- #3# implement your handler.
 
 source code for myhandlers/helloworld.php:
 
@@ -61,9 +75,9 @@ class helloworld extends BaseHandler
 
 ```
 
-4. testing
+-- #4# testing
 
-```
+```bash
 curl -H "Content-Type:application/x-www.form-urlencoded"   --data '{"action" : "helloworld","data" : {"a":1, "b":2}}' http://127.0.0.1/wooapp/index.php -v
 ```
 
@@ -92,5 +106,5 @@ Content-Type: text/html; charset=UTF-8
 ```
 
 ## Feedbacks
-zergl <e3.gemini#qq.com>
+zergl 859077290#qq.com
 

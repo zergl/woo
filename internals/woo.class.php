@@ -3,16 +3,15 @@
     $about = array(
         "author" -> "Gemini <859077290@qq.com>",
         "date"   -> "2016/07/21",
-        "desc"   -> "Woo -- Yet Another TINY PHP framework."
+        "desc"   -> "Woo -- Yet Another TINY PHP Framework."
     );
 */
 require_once "singleton.class.php";
 
 class Woo extends Singleton
 {
-    public function serve($root_dir, $handler_dir)
+    public function serve($handler_dir)
     {
-        defined('ROOT_DIR') or define('ROOT_DIR', $root_dir);
         defined('WOO_DIR') or define('WOO_DIR', dirname(__FILE__));
         defined('HANDLER_DIR') or define('HANDLER_DIR', $handler_dir);
 
