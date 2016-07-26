@@ -14,6 +14,18 @@
 
 `UNDER DEVELOPMENT`
 
+## FEATURES
+
+* extremely tiny.
+* simple routing.
+    * `action` : routing for handler's class;
+    * `METHOD` : routing for inner processing method of the handlers.
+* simple and easy for learning how to write a application framework.
+* others
+    * now support `POST` only.
+    * no DAO for database wrapper yet.
+    * no performance benchmark yet.
+
 
 ## How to Use
 
@@ -21,8 +33,8 @@ the struct of demo application as follows:
 
 ```
 $ tree woo_demo/
-woo_demo/
-|-- import  // `customized directory to place Woo.`
+woo_demo
+|-- import          // `customized directory to place Woo.`
 |   `-- woo
 |       |-- README.md
 |       |-- app.php
@@ -33,8 +45,8 @@ woo_demo/
 |       |   `-- woo.class.php
 |       `-- myhandlers
 |           `-- helloworld.class.php
-|-- index.php // `the application entry`
-`-- myhandlers // `directory for your logic handlers`
+|-- index.php       // `the application entry`
+`-- myhandlers      // `directory for your logic handlers`
     `-- helloworld.class.php `the helloworld handler's class.`
 ```
 
