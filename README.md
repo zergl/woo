@@ -18,8 +18,8 @@
 
 * extremely tiny.
 * simple routing.
-    * `action` : routing for handler's class;
-    * `METHOD` : routing for inner processing method of the handlers.
+    * `action` : routing to handler's class;
+    * `METHOD` : routing to inner processing method of the handlers. `GET` -> do_get(), `POST` -> do_post().
 * simple and easy for learning how to write a application framework.
 * others
     * now support `POST` only.
