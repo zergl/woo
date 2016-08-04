@@ -6,6 +6,7 @@ final class helloworld extends BaseHandler
     protected function do_post($req) 
     {
         // dealing your bussiness here
+        $rsp = new stdClass();
         $rsp->ret   = 0;
         $rsp->msg   = 'succ.';
         $rsp->data  = "Hello world!";
